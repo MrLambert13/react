@@ -1,0 +1,32 @@
+<meta charset="UTF-8">
+<script>
+  "use strict";
+
+  /**
+   * Функция для вывода сообщения "hello"
+   */
+  function foo() {
+    console.log('hello');
+  }
+
+  /**
+   * Функция которая вывполняет times раз callback функцию
+   * @param times {number} число, обозначающее количество повтора функции
+   * @param callback {function} функция которая будет повторяться
+   */
+  function loop(times = 0, callback = null) {
+    if (typeof callback === 'function') {
+      for (; times > 0; times--) {
+        callback();
+      }
+    } else {
+      console.log('Вы должны были пределать функцию вторым аргументом! А передали - '
+        + typeof callback);
+    }
+
+  }
+
+  loop(3, foo); //hello 3 раза
+  loop(4, 123); //Вы должны были пределать функцию вторым аргументом! А передали - number
+  loop(5, 'string'); //Вы должны были пределать функцию вторым аргументом! А передали - string
+</script>

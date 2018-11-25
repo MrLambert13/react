@@ -1,0 +1,42 @@
+<meta charset="UTF-8">
+<script>
+  "use strict";
+
+  function calculateArea(shape, arg1, arg2, arg3) {
+    var area = 0;
+    var figure = '';
+    var input = [arg1, arg2, arg3];
+    switch (shape) {
+      case 'circ': //круг
+        area = Math.pow(arg1, 2) * Math.PI;
+        figure = 'circle';
+        break;
+      case 'rect'://прямоугольник
+        area = arg1 * arg2;
+        figure = 'rectangle';
+        break;
+      case 'squa'://квадрат
+        area = Math.pow(arg1, 2);
+        figure = 'rectangle';
+        break;
+      case 'tria'://треуголник
+        area = (arg1 * arg2) / 2;
+        figure = 'triangle';
+        break;
+      case 'trap'://трапеция
+        area = (arg1 + arg2) * arg3 / 2;
+        figure = 'trapezoid';
+        break;
+      default:
+      //Если фигура не известна
+    }
+
+    return {area, figure, input}
+  }
+
+  calculateArea('trap', 3, 5, 10);
+  calculateArea('rect', 4, 6);
+  calculateArea('squa', 5);
+  calculateArea('circ', 10);
+
+</script>

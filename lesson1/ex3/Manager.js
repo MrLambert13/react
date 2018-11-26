@@ -1,6 +1,9 @@
 class Manager extends Employee
 {
-    arrEmployee = [];
+    arrayOfDevelopers = [];
 
-
+    addDeveloper(develop) {
+        this.arrayOfDevelopers.push(develop);
+        develop.setManager(this);
+    }
 }

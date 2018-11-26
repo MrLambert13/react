@@ -1,15 +1,29 @@
-class Human {
-  name;
+/**
+ *
+ */
+class Human
+{
+    name;
+    age;
+    dateOfBirth;
 
-  constructor(name) {
-    this.name = name;
-  }
+    constructor(name, age, dateOfBirth) {
+        this.name = name;
+        this.age = age;
+        this.dateOfBirth = dateOfBirth;
+    }
 
-  setName(value) {
-    this.name = value;
-  }
+    setName(value) {
+        this.name = value;
+    }
 
-  getName() {
-    return this.name
-  }
+    getName() {
+        return this.name
+    }
+
+    displayInfo() {
+        return 'Имя: ' + this.name + '.'
+            + ' Возраст: ' + this.age + '.'
+            + ' Дата рождения: ' + this.dateOfBirth + '.';
+    }
 }

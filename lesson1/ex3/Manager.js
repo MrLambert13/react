@@ -1,3 +1,6 @@
-class Manager extends Employee{
-  var
+class Manager extends Employee
+{
+    arrEmployee = [];
+
+
 }

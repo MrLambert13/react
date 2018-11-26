@@ -1,3 +1,4 @@
-class Developer extends Employee{
+class Developer extends Employee
+{
 
 }

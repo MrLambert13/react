@@ -8,35 +8,27 @@
      * в виде объекта. Этот объект нужно вывести в консоли.
      */
 
+    /**
+     * Генератор-анкета с вопросами и хранеием результатов ответов
+     * @return {IterableIterator<{"Ответ 1:": *, "Ответ 2:": *, "Ответ 3:": *}>}
+     */
     function* generator() {
+        let answer1 = yield;
+        let answer2 = yield ;
+        let answer3 = yield ;
 
-        function* generateSequence(start, end) {
-            for (let i = start; i <= end; i++) yield i;
+        return {
+            "Ответ 1:": answer1,
+            "Ответ 2:": answer2,
+            "Ответ 3:": answer3,
         }
-
-        function* generateAlphaNum() {
-
-            // 0..9
-            yield* generateSequence(48, 57);
-
-            // A..Z
-            yield* generateSequence(65, 90);
-
-            // a..z
-            yield* generateSequence(97, 122);
-
-        }
-
-        let str = '';
-
-        for (let code of generateAlphaNum()) {
-            str += String.fromCharCode(code);
-        }
-
-        alert(str); // 0..9A..Za..z
-
-        console.log(resultObject);
     }
 
-    generator();
+    const result = generator();
+    //запуск генератора
+    result.next().value;
+    //переходим ко второму yield
+    result.next(prompt('Вопрос 1:')).value;
+    //переходим к третьему yield и получаем результат
+    console.log(result.next(prompt('Вопрос 3:')).value); //{Ответ 1:: "1", Ответ 2:: "2", Ответ 3:: "3"}
 </script>

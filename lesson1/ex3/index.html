@@ -13,13 +13,13 @@
 <script>
     "use strict";
 
-    var manag = new Manager('Anya', '23', '10.12.2000', 13300, 'departs');
-    var manag2 = new Manager('Petya', '13', '13.12.1998', 60033, 'departs');
+    const manag = new Manager('Anya', '23', '10.12.2000', 13300, 'departs');
+    const manag2 = new Manager('Petya', '13', '13.12.1998', 60033, 'departs');
     console.log(manag.displayInfo()); //без разарбов
     console.log(manag2.displayInfo()); //без разарбов
 
-    var dev = new Developer('john', '18', '13.10.2000', 60300, 'departs');
-    var dev2 = new Developer('Nick', '38', '13.10.2000', 36300, 'departs');
+    const dev = new Developer('john', '18', '13.10.2000', 60300, 'departs');
+    const dev2 = new Developer('Nick', '38', '13.10.2000', 36300, 'departs');
 
     manag.addDeveloper(dev); //добавили Ане в массив джона
     manag.addDeveloper(dev2); // добавили Ане в массив Ника

@@ -5,7 +5,7 @@ class Developer extends Employee
      * @param manager {object} - экземпляр класса Manager
      */
     setManager(manager) {
-        if (manager instanceof Manager && this.mainManager != manager) {
+        if (manager instanceof Manager && this.mainManager !== manager) {
             //Если уже есть менеджер, то нужно сначала от него удалить разработчика
             if (this.mainManager) {
                 this.mainManager.delDeveloper(this);

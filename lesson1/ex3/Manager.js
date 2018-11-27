@@ -10,7 +10,7 @@ class Manager extends Employee
      * @param develop {object} - экземпляр класса Developer
      */
     addDeveloper(develop) {
-        if (develop instanceof Developer && this.arrayOfDevelopers.indexOf(develop) == -1) {
+        if (develop instanceof Developer && this.arrayOfDevelopers.indexOf(develop) === -1) {
             this.arrayOfDevelopers.push(develop);
             develop.setManager(this);
         }
@@ -21,8 +21,8 @@ class Manager extends Employee
      * @param develop {object} - экземпляр класса Developer
      */
     delDeveloper(develop) {
-        var idx = this.arrayOfDevelopers.indexOf(develop);
-        if (develop instanceof Developer && idx != -1) {
+        let idx = this.arrayOfDevelopers.indexOf(develop);
+        if (develop instanceof Developer && idx !== -1) {
             this.arrayOfDevelopers.splice(idx, 1);
             develop.delManager(this);
         }
@@ -33,7 +33,7 @@ class Manager extends Employee
      * @return {string} Вся информация об объекте
      */
     displayInfo() {
-        var arrDevName = this.arrayOfDevelopers.map((elem) => elem.name);
+        const arrDevName = this.arrayOfDevelopers.map((elem) => elem.name);
         return (this.arrayOfDevelopers.length > 0)
           ? super.displayInfo()
             + "Ваши разработчики: "

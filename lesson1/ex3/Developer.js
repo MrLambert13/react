@@ -2,7 +2,7 @@ class Developer extends Employee
 {
     /**
      * Установить/сменить менеджера(и вызвать добавление у менеджера тоже)
-     * @param manager {object} - экземпляр класса Developer
+     * @param manager {object} - экземпляр класса Manager
      */
     setManager(manager) {
         if (manager instanceof Manager && this.mainManager != manager) {
@@ -16,6 +16,10 @@ class Developer extends Employee
         }
     }
 
+    /**
+     * Удалить менеджера (и вызвать удаление у менеджера тоже)
+     * @param manager {object} - экземпляр класса Manager
+     */
     delManager(manager) {
         if (manager instanceof Manager) {
             this.mainManager = null;
@@ -23,6 +27,10 @@ class Developer extends Employee
         }
     }
 
+    /**
+     *  Вывод всей информации об объекте.
+     * @return {string} Вся информация об объекте
+     */
     displayInfo() {
         return (this.mainManager)
           ? super.displayInfo()

@@ -1,10 +1,7 @@
 class Employee extends Human
 {
-    salary;
-    department;
-
-    constructor(props, salary, department ) {
-        super(props);
+    constructor(name, age, dateOfBirth, salary, department ) {
+        super(name, age, dateOfBirth);
         this.salary = salary;
         this.department = department;
     }
@@ -13,6 +10,6 @@ class Employee extends Human
     displayInfo() {
         return super.displayInfo()
             + " Зарплата: " + this.salary + "."
-            + " Отдел: " + this.department + ".";
+            + " Отдел: " + this.department + ". ";
     }
 }

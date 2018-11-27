@@ -3,10 +3,6 @@
  */
 class Human
 {
-    name;
-    age;
-    dateOfBirth;
-
     constructor(name, age, dateOfBirth) {
         this.name = name;
         this.age = age;

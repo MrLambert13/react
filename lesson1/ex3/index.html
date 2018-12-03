@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script src="Human.js"></script>
+  <script src="Employee.js"></script>
+  <script src="Manager.js"></script>
+  <script src="Developer.js"></script>
+</head>
+<body>
+
+<script>
+    "use strict";
+
+    const manag = new Manager('Anya', '23', '10.12.2000', 13300, 'departs');
+    const manag2 = new Manager('Petya', '13', '13.12.1998', 60033, 'departs');
+    console.log(manag.displayInfo()); //без разарбов
+    console.log(manag2.displayInfo()); //без разарбов
+
+    const dev = new Developer('john', '18', '13.10.2000', 60300, 'departs');
+    const dev2 = new Developer('Nick', '38', '13.10.2000', 36300, 'departs');
+
+    manag.addDeveloper(dev); //добавили Ане в массив джона
+    manag.addDeveloper(dev2); // добавили Ане в массив Ника
+    console.log(manag.displayInfo()); //массив разрабов = Джон, Ник
+    console.log(dev.displayInfo()); //Джон, менеджер - Аня
+    console.log(dev2.displayInfo()); //Ник, менеджер - Аня
+    dev2.setManager(manag2); //Ставим Нику менеджера Петю.
+    console.log(dev2.displayInfo()); //Ник, менеджер - Петя
+    console.log(manag2.displayInfo()); //Петя, в массиве только Ник
+    console.log(manag.displayInfo()); // Аня, в массиве только Джон
+
+
+
+</script>
+</body>
+</html>

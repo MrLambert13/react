@@ -2,6 +2,14 @@
 <script>
   "use strict";
 
+  /**
+   * Функция расчета площади некоторых фигур
+   * @param shape {string} Короткое название фигуры (первые 4 символа на англ.)
+   * @param arg1 {number} параметры фигуры необходимые для подсчета площади (длина, высота, радиус и т.д.)
+   * @param arg2 {number} параметры фигуры необходимые для подсчета площади (длина, высота, радиус и т.д.)
+   * @param arg3 {number} параметры фигуры необходимые для подсчета площади (длина, высота, радиус и т.д.)
+   * @return {{area: number, figure: string, input: *[]}} Возращаемый ответ в виде объекта, где area - площадь, figure - название фигуры, input - массив исходных данных
+   */
   function calculateArea(shape, arg1, arg2, arg3) {
     var area = 0;
     var figure = '';
@@ -17,7 +25,7 @@
         break;
       case 'squa'://квадрат
         area = Math.pow(arg1, 2);
-        figure = 'rectangle';
+        figure = 'squad';
         break;
       case 'tria'://треуголник
         area = (arg1 * arg2) / 2;
@@ -34,9 +42,9 @@
     return {area, figure, input}
   }
 
-  calculateArea('trap', 3, 5, 10);
-  calculateArea('rect', 4, 6);
-  calculateArea('squa', 5);
-  calculateArea('circ', 10);
+  console.log(calculateArea('trap', 3, 5, 10));
+  console.log(calculateArea('rect', 4, 6));
+  console.log(calculateArea('squa', 5));
+  console.log(calculateArea('circ', 10));
 
 </script>

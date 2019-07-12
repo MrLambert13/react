@@ -14,8 +14,8 @@
      */
     function* generator() {
         let answer1 = yield;
-        let answer2 = yield ;
-        let answer3 = yield ;
+        let answer2 = yield;
+        let answer3 = yield;
 
         return {
             "Ответ 1:": answer1,
@@ -26,9 +26,10 @@
 
     const result = generator();
     //запуск генератора
-    result.next().value;
+    result.next();
     //переходим ко второму yield
-    result.next(prompt('Вопрос 1:')).value;
+    result.next(prompt('Вопрос 1:'));
+    result.next(prompt('Вопрос 2:'));
     //переходим к третьему yield и получаем результат
     console.log(result.next(prompt('Вопрос 3:')).value); //{Ответ 1:: "1", Ответ 2:: "2", Ответ 3:: "3"}
 </script>

@@ -16,8 +16,9 @@
    */
   function loop(times = 0, callback = null) {
     if (typeof callback === 'function') {
-      for (; times > 0; times--) {
+      while (times>0) {
         callback();
+        times--;
       }
     } else {
       console.log('Вы должны были пределать функцию вторым аргументом! А передали - '

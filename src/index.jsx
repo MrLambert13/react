@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import ReactDom from 'react-dom';
-import {Header} from './Components/Header';
+import {MainPage} from './Components/MainPage';
 
 class App extends Component {
   render(){
     return (
       <div>
-        <Header />
+        <MainPage />
       </div>
     );
   }

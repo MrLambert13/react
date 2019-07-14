@@ -5,7 +5,8 @@
     margin: 10px auto;
     padding: 10px 20px;
     list-style: none;
-    background-color: #44ff6d;
+    background-color: #c7c7c7;
+    border-radius: 5px;
     &:hover {
       background-color: #35fab2;
     }
@@ -13,7 +14,6 @@
 
   & a {
     text-decoration: none;
-
-    
+    color: black;
   }
 }

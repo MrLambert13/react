@@ -1,0 +1,19 @@
+.menu {
+  display: flex;
+
+  &_li {
+    margin: 10px auto;
+    padding: 10px 20px;
+    list-style: none;
+    background-color: #44ff6d;
+    &:hover {
+      background-color: #35fab2;
+    }
+  }
+
+  & a {
+    text-decoration: none;
+
+    
+  }
+}

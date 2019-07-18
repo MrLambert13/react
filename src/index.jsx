@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ReactDom from 'react-dom';
-import {MainPage} from './Components/MainPage';
+import {MainPage} from 'components/MainPage';
 
 class App extends Component {
   render(){
